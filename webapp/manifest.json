@@ -93,7 +93,13 @@
       "css": []
     },
     "routing": {
-      "config": {},
+      "config": {
+        "flexibleColumnLayout": {
+          "defaultTwoColumnLayoutType": "TwoColumnsBeginExpanded",
+          "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+        },
+        "routerClass": "sap.f.routing.Router"
+      },
       "routes": [
         {
           "pattern": ":?query:",
@@ -106,7 +112,6 @@
           "pattern": "Travel({key}):?query:",
           "name": "TravelObjectPage",
           "target": [
-            "TravelList",
             "TravelObjectPage"
           ]
         },
@@ -114,7 +119,6 @@
           "pattern": "Travel({key})/_Booking({key2}):?query:",
           "name": "BookingObjectPage",
           "target": [
-            "TravelList",
             "TravelObjectPage",
             "BookingObjectPage"
           ]
@@ -144,7 +148,9 @@
                 }
               }
             }
-          }
+          },
+          "controlAggregation": "beginColumnPages",
+          "contextPattern": ""
         },
         "TravelObjectPage": {
           "type": "Component",
@@ -162,7 +168,9 @@
                 }
               }
             }
-          }
+          },
+          "controlAggregation": "beginColumnPages",
+          "contextPattern": "/Travel({key})"
         },
         "BookingObjectPage": {
           "type": "Component",
@@ -173,9 +181,17 @@
               "editableHeaderContent": false,
               "contextPath": "/Travel/_Booking"
             }
-          }
+          },
+          "controlAggregation": "midColumnPages",
+          "contextPattern": "/Travel({key})/_Booking({key2})"
         }
       }
+    },
+    "rootView": {
+      "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+      "type": "XML",
+      "async": true,
+      "id": "appRootView"
     }
   },
   "sap.fiori": {
