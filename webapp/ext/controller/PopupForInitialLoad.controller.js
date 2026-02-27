@@ -1,0 +1,21 @@
+sap.ui.define(['sap/ui/core/mvc/ControllerExtension',
+			   'sap/m/MessageToast'
+], function (ControllerExtension, MessageToast) {
+	'use strict';
+
+	return ControllerExtension.extend('travel.ext.controller.PopupForInitialLoad', {
+		// this section allows to extend lifecycle hooks or hooks provided by Fiori elements
+		override: {
+			/**
+             * Called when a controller is instantiated and its View controls (if available) are already created.
+             * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+             * @memberOf travel.ext.controller.PopupForInitialLoad
+             */
+			onInit: function () {
+				// you can access the Fiori elements extensionAPI via this.base.getExtensionAPI
+				var oModel = this.base.getExtensionAPI().getModel();
+				// MessageToast.show('Welcome to first Fiori Extension');
+			}
+		}
+	});
+});
