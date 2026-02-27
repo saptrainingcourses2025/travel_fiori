@@ -1,0 +1,39 @@
+              // "views": {
+              //   "paths": [
+              //     {
+              //       "key": "tab1",
+              //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPV_ALL"
+              //     },
+              //     {
+              //       "key": "tab2",
+              //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPV_ACCEPTED"
+              //     },
+              //     {
+              //       "key": "tab3",
+              //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_OPEN"
+              //     },
+              //     {
+              //       "key": "tab4",
+              //       "entitySet": "travel_chart",
+              //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_ANA_ALL"
+              //     }
+              //   ],
+              //   "showCounts": false
+              // },
+
+
+                    // "quickVariantSelection1": {
+                    //   "paths": [
+                    //     {
+                    //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_ALL"
+                    //     },
+                    //     {
+                    //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_OPEN"
+                    //     },
+                    //     {
+                    //       "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_ACCEPTED"
+                    //     }
+                    //   ],
+                    //   "hideTableTitle": false,
+                    //   "showCounts": true
+                    // }

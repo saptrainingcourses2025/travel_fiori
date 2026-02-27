@@ -8,6 +8,7 @@
       "version": "0.0.1"
     },
     "title": "{{appTitle}}",
+    "subTitle": "{{subTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
     "sourceTemplate": {
@@ -59,7 +60,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {}
+        "sap.fe.templates": {},
+        "sap.f": {}
       }
     },
     "contentDensities": {
@@ -96,17 +98,26 @@
         {
           "pattern": ":?query:",
           "name": "TravelList",
-          "target": "TravelList"
+          "target": [
+            "TravelList"
+          ]
         },
         {
           "pattern": "Travel({key}):?query:",
           "name": "TravelObjectPage",
-          "target": "TravelObjectPage"
+          "target": [
+            "TravelList",
+            "TravelObjectPage"
+          ]
         },
         {
           "pattern": "Travel({key})/_Booking({key2}):?query:",
           "name": "BookingObjectPage",
-          "target": "BookingObjectPage"
+          "target": [
+            "TravelList",
+            "TravelObjectPage",
+            "BookingObjectPage"
+          ]
         }
       ],
       "targets": {
